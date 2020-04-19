@@ -34,9 +34,5 @@ npm install
 ```
 - Run the project on http://localhost
 ```bash
-node index
-```
-or
-```bash
-nodemon
+npm run dev
 ```
