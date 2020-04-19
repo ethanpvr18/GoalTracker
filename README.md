@@ -30,7 +30,7 @@
 git clone https://github.com/ethanpvr18/GoalTracker.git
 cd GoalTracker/
 ```
-- Install requisite packages and modules.
+- Install packages and modules.
 ```bash
 npm install
 ```
