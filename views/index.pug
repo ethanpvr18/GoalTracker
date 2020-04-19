@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    ul.list-group.container.goals
+            each goal, i in goals
+                li.list-group-item.task
+                    h2
+                        a(href="/goals/"+goal._id)= goal.title
+                    br
+                    .flex-container
+                        h4 Goal Progress
+                        pre     
+                        progress.hundred(id='goal-progress' value=goal.currentProgress max=goal.goalAmount)
+                        table.grow
+                            tr
+                                th Current Progress
+                                th Total Goal
+                            tr
+                                td=goal.currentProgress+' '+goal.units
+                                td=goal.goalAmount+' '+goal.units
+    #Modal.modal
+            .modal-content
+                form(method='POST', action='/goals/add')
+                    #form-group.flex-container
+                        input.selector.noshadow.form-control.txtb(name='start', type='text', placeholder='Start Date (mm/dd/yyyy)')
+                        input.selector.noshadow.form-control.txtb(name='title', type='text', placeholder='Activity Name')
+                        input.selector.noshadow.form-control.txtb(name='goalAmount', type='text', placeholder='Goal Amount')
+                        input.selector.noshadow.form-control.txtb(name='units', type='text', placeholder='Activity Unit\'s')
+                        input.selector.noshadow.form-control.txtb(name='submit', type='submit', placeholder='Add Goal')
+    center
+        button.flex-container.btn.center.openModal.container Add Goal
+        br
+        form(method='POST', action='/logout')   
+            button.logout.flex-container.btn.center.openModal.container(name='submit') Log Out
+        
+    

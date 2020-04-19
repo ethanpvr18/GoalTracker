@@ -1,0 +1,257 @@
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    }
+    body{
+        background-color: #d8ebf2;
+    }
+    .fas{
+        color: white;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    .form-element {
+        background-color: #87c5de;
+    }
+    table { 
+        width: 100%;
+    }
+    .grow {
+        width: 100%;
+    }
+    td, th {
+        width: auto;
+    }
+    .logout {
+        margin-top: 5px;;
+        background-color: #34b7eb;
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+        outline: 0;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        vertical-align: top;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: #34b7eb;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: x-large;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        outline: 0;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: #34b7eb;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: x-large;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .openModal {
+        color: white;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #d8ebf2;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .flex-container-narrow {
+        left: 40%;
+        position: absolute;
+        display: inline-flex;
+        justify-content: center;
+        background-color: #34b7eb;
+        color: white;
+        width: 20%;
+    }
+
+    .hundred{
+        width: 100%;
+        background-color: #42db94;
+    }
+
+    .center {
+        justify-content: center;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    button {
+        font-size: x-large;
+        width: 10%;
+    }
+
+    .red {
+        background: #bf291f;
+        width: 100%;
+        padding: 18px;
+        margin: 6px 0;
+        overflow: hidden;
+    }
+
+    .green {
+        background: #42db94;
+        width: 100%;
+        padding: 18px;
+        margin: 6px 0;
+        overflow: hidden;
+    }
+
+    .flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: #34b7eb;
+    }
+
+    .bottom {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    }
+    .container{
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    }
+    .txtb{
+    width: 100%;
+    background-color: #a4def5;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+    color: black;
+    }
+    .txta{
+        width: 100%;
+        border: none;
+        background: none;
+        background-color: #87c5de;
+        padding: 10px;
+        outline: none;
+        font-size: 18px;
+    }
+    .selector.noshadow {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: 0.5px solid #87c5de;
+    }
+    .changeTxt {
+    border: none;
+    background: none;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+    color:white;
+    }
+    h3{
+    margin: 10px 0;
+    }
+    .task{
+    width: 100%;
+    background: #34b7eb;
+    padding: 18px;
+    margin: 6px 0;
+    overflow: hidden;
+    }
+    .task i{
+    float: right;
+    margin-left: 20px;
+    cursor: pointer;
+    }
+    .goals .task{
+    color: #fff;
+    }
+    #goalMenu {
+    padding: 18px;
+    display: "none";
+    cursor: pointer;
+    color: #fff;
+    background: #34b7eb;
+    }
+    @media only screen and (width: 375px){
+        .container{
+            max-width: 100%;
+            margin: auto;
+            padding: 10px;
+        }
+        .btn {
+            width: 100%;
+        }
+        .txtb {
+            width: 100%;
+            float: left;
+        }
+        .flex-container{
+            flex-direction: column;
+        }
+    }

@@ -1,0 +1,54 @@
+extends layout
+
+block content
+    #Modal.modal
+            .modal-content
+                form(method='POST', action='/goals/'+goal._id)
+                    #form-group.flex-container
+                        input.selector.noshadow.form-control.txtb(name='start', type='text', placeholder='Start Date (mm/dd/yyyy)')
+                        input.selector.noshadow.form-control.txtb(name='title', type='text', placeholder='Activity Name')
+                        input.selector.noshadow.form-control.txtb(name='goalAmount', type='text', placeholder='Goal Amount')
+                        input.selector.noshadow.form-control.txtb(name='units', type='text', placeholder='Activity Unit\'s)')
+                        input.selector.noshadow.form-control.txtb(name='submit', type='submit', placeholder='Add Goal')
+    ul.list-group.container.goals
+        li.list-group-item.task
+            h3= goal.title
+            .flex-container
+                h4 Goal Progress
+                pre     
+                progress.hundred(id='goal-progress' value=goal.currentProgress max=goal.goalAmount)
+                table
+                    thead
+                        tr
+                            th Current Progress
+                            th Total Goal
+                    tbody
+                        tr
+                            td=goal.currentProgress+' '+goal.units
+                            td=goal.goalAmount+' '+goal.units
+        li.list-group-item.task
+            h3 Goal Log
+            .flex-container.txtb
+                table
+                    thead
+                        tr
+                            th Date
+                            th= goal.units
+                    tbody
+                    - let x = 0
+                    each val, index in goal.goalLog
+                        tr
+                            td= goal.goalLog[x]
+                            td= goal.goalLog[x+1]
+                        - x+=2
+            h3 Add Goal Entry
+            form(method='POST', action='/goals/log/'+goal._id).selector.noshadow
+                input.selector.noshadow.txtb(name='date' type='text' placeholder='Date (mm/dd/yyyy)')
+                input.selector.noshadow.txtb(name='units' type='number' placeholder=goal.units)
+                input.selector.noshadow.txtb.addLogEntry(type='submit' value='Submit Entry')
+        li.list-group-item.red
+            h3
+                a.openModal Edit Goal
+        li.list-group-item.red
+            h3
+                a.delete-goal(data-id=goal._id) Delete Goal

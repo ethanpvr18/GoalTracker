@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    ul.list-group.container.goals
+        li.list-group-item.task.flex-container
+            a.openModal Log In
+        li.list-group-item.task.flex-container
+            a.openModal1 Register
+    #Modal.modal
+            .modal-content
+                form(method='post', action='/login')
+                    #form-group.flex-container
+                        input.selector.noshadow.form-control.txtb(id='emailL' name='email', type='text', placeholder='Email')
+                        input.selector.noshadow.form-control.txtb(id='passwordL' name='password', type='password', placeholder='Password')
+                        input.selector.noshadow.form-control.txtb(name='submit', type='submit', value='Log In')
+    #Modal1.modal
+            .modal-content
+                form(method='post', action='/users/register')
+                    #form-group.flex-container
+                        input.selector.noshadow.form-control.txtb(id='emailS' name='email', type='text', placeholder='Email')
+                        input.selector.noshadow.form-control.txtb(id='passwordS' name='password', type='password', placeholder='Password')
+                        input.selector.noshadow.form-control.txtb(name='submit', type='submit', value='Register')
