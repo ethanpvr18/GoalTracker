@@ -5,10 +5,10 @@ block content
             .modal-content
                 form(method='POST', action='/goals/'+goal._id)
                     #form-group.flex-container
-                        input.selector.noshadow.form-control.txtb(name='start', type='text', placeholder='Start Date (mm/dd/yyyy)')
-                        input.selector.noshadow.form-control.txtb(name='title', type='text', placeholder='Activity Name')
-                        input.selector.noshadow.form-control.txtb(name='goalAmount', type='text', placeholder='Goal Amount')
-                        input.selector.noshadow.form-control.txtb(name='units', type='text', placeholder='Activity Unit\'s)')
+                        input.selector.noshadow.form-control.txtb(name='start', type='text', placeholder='Start Date (mm/dd/yyyy)' value = goal.start)
+                        input.selector.noshadow.form-control.txtb(name='title', type='text', placeholder='Activity Name' value = goal.title)
+                        input.selector.noshadow.form-control.txtb(name='goalAmount', type='text', placeholder='Goal Amount' value = goal.goalAmount)
+                        input.selector.noshadow.form-control.txtb(name='units', type='text', placeholder='Activity Unit\'s' value = goal.units)
                         input.selector.noshadow.form-control.txtb(name='submit', type='submit', placeholder='Add Goal')
     ul.list-group.container.goals
         li.list-group-item.task

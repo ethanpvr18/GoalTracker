@@ -4,6 +4,9 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     }
+    .blackText {
+        color: black;
+    }
     body{
         background-color: #d8ebf2;
     }

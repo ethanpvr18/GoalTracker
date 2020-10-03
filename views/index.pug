@@ -28,10 +28,23 @@ block content
             .modal-content
                 form(method='POST', action='/goals/add')
                     #form-group.flex-container
-                        input.selector.noshadow.form-control.txtb(name='start', type='text', placeholder='Start Date (mm/dd/yyyy)')
-                        input.selector.noshadow.form-control.txtb(name='title', type='text', placeholder='Activity Name')
-                        input.selector.noshadow.form-control.txtb(name='goalAmount', type='text', placeholder='Goal Amount')
-                        input.selector.noshadow.form-control.txtb(name='units', type='text', placeholder='Activity Unit\'s')
+                        input.selector.noshadow.form-control.txtb(name='start', type='text', placeholder='Start Date (mm/dd/yyyy)' required)
+                        input.selector.noshadow.form-control.txtb(name='title', type='text', placeholder='Activity Name' required)
+                        input.selector.noshadow.form-control.txtb(name='goalAmount', type='text', placeholder='Goal Amount' required)
+                        input.selector.noshadow.form-control.txtb(name='units', type='text', placeholder='Activity Unit\'s' required)
+                        //- label.selector.noshadow.form-control.txtb(for='items') Activity Unit's
+                        //-     select.selector.noshadow.form-control.txtb#items(required)
+                        //-         option.blackText(value='Inches')= "Inches"
+                        //-         option.blackText(value='Feet')= "Feet"
+                        //-         option.blackText(value='Miles')= "Miles"
+                        //-         option.blackText(value='Pounds')= "Pounds"
+                        //-         option.blackText(value='Seconds')= "Seconds"
+                        //-         option.blackText(value='Minutes')= "Minutes"
+                        //-         option.blackText(value='Hours')= "Hours"
+                        //-         option.blackText(value='Days')= "Days"
+                        //-         option.blackText(value='Weeks')= "Weeks"
+                        //-         option.blackText(value='Months')= "Months"
+                        //-         option.blackText(value='Years')= "Years"
                         input.selector.noshadow.form-control.txtb(name='submit', type='submit', placeholder='Add Goal')
     center
         button.flex-container.btn.center.openModal.container Add Goal
