@@ -1,4 +1,14 @@
 $(document).ready(function(){
+  $(function() {
+    $(".meter > span").each(function() {
+      $(this)
+        .data("origWidth", $(this).width())
+        .width(0)
+        .animate({
+          width: $(this).data("origWidth")
+        }, 1200);
+    });
+  });
   $('.delete-goal').on('click', function(e){
     $target = $(e.target);
     let id = $target.attr('data-id');

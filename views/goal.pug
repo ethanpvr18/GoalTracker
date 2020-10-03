@@ -13,19 +13,25 @@ block content
     ul.list-group.container.goals
         li.list-group-item.task
             h3= goal.title
-            .flex-container
-                h4 Goal Progress
-                pre     
-                progress.hundred(id='goal-progress' value=goal.currentProgress max=goal.goalAmount)
-                table
-                    thead
-                        tr
-                            th Current Progress
-                            th Total Goal
-                    tbody
-                        tr
-                            td=goal.currentProgress+' '+goal.units
-                            td=goal.goalAmount+' '+goal.units
+            h4 Goal Progress
+            pre     
+            .meter.nostripes
+                span.progress
+                script.
+                    var cp = !{goal.currentProgress};
+                    var ga = !{goal.goalAmount};
+                    var amount = cp/ga*100;
+                    var strAmount = Math.floor(amount).toString() +  "%";
+                    document.querySelector('.progress').style.width = strAmount;
+            table.grow
+                thead
+                    tr
+                        th Current Progress
+                        th Total Goal
+                tbody
+                    tr
+                        td=goal.currentProgress+' '+goal.units
+                        td=goal.goalAmount+' '+goal.units
         li.list-group-item.task
             h3 Goal Log
             .flex-container.txtb

@@ -20,7 +20,7 @@ const options = {
     family: 4
   };
 
-mongoose.connect(config.database, options);
+mongoose.connect(config.database, options).catch();
 let db = mongoose.connection;
 
 db.once('open', function(){
