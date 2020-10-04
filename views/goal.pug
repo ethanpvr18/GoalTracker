@@ -10,6 +10,13 @@ block content
                         input.selector.noshadow.form-control.txtb(name='goalAmount', type='text', placeholder='Goal Amount' value = goal.goalAmount)
                         input.selector.noshadow.form-control.txtb(name='units', type='text', placeholder='Activity Unit\'s' value = goal.units)
                         input.selector.noshadow.form-control.txtb(name='submit', type='submit', placeholder='Add Goal')
+    #Modal2.modal
+            .modal-content
+                ul.list-group.container.goals
+                    li.list-group-item.red
+                        h3 Are you sure?
+                        h3
+                            a.delete-goal(data-id=goal._id) Delete Goal
     ul.list-group.container.goals
         li.list-group-item.task
             h3= goal.title
@@ -57,4 +64,4 @@ block content
                 a.openModal Edit Goal
         li.list-group-item.red
             h3
-                a.delete-goal(data-id=goal._id) Delete Goal
+                a.openModal2 Delete Goal
